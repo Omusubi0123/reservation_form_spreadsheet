@@ -1,3 +1,4 @@
+// スプシの該当する列名と，予約成功可否の列インデックス(int)
 const RESERVE_STATUS_SHEETNAME = "予約状況";
 const RESERVE_SUCCESS_FAILURE_COLUMN_INDEX = 12
 

@@ -1,7 +1,8 @@
-const FORM_ID = "1OgN-gA9vLzTEYJBZMkK-13Q6hS8CoB6Ad8cOWXwpKS4";
+// フォームの予約日時のプルダウンボタンを更新するスクリプト
+const FORM_ID = "1Og...KS4"; // 予約フォームのID 各自の環境に合わせて変更すること
 const DAYTIME_BUTTON_TITLE = "予約日時";
 const RESERVE_STATUS_HEADER = "予約の空き状況";
-const STAGE_DAYTIME = ["5月4日(土) 12:40 ~ 15:10", "5月4日(土) 17:50 ~ 20:20", "5月5日(日) 10:00 ~ 12:30", "5月5日(日) 14:40 ~ 17:10"];
+const STAGE_DAYTIME = ["5月4日(土) 12:40 ~ 15:10", "5月4日(土) 17:50 ~ 20:20", "5月5日(日) 10:00 ~ 12:30", "5月5日(日) 14:40 ~ 17:10"]; // 予約可能なステの日（フォームと同一のものを記入すること）
 
 function updateStageSelectButton() {
   var status = return_capacity_level_and_left_num();

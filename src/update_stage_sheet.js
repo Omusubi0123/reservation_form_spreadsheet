@@ -8,7 +8,7 @@ const STAGE_NAME_DICT = {
   "5月4日(土) 17:50 ~ 20:20": STAGE_2,
   "5月5日(日) 10:00 ~ 12:30": STAGE_3,
   "5月5日(日) 14:40 ~ 17:10": STAGE_4
-};
+};  // update_stage_select_button.jsと同一のものを記入すること
 
 function updateReservedStageSheet(column_data, submitted_data) {
   // 予約されたステのシートに予約者情報を追加

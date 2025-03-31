@@ -1,6 +1,8 @@
+// スプシの予約合計人数のシート名と，予約状況シートにおける予約人数が書かれた列のインデックス
 const RESERVE_TOTAL_SHEETNAME = "予約合計人数";
 const PEOPLE_COUNT_COLUMN_INDEX = 6
 
+// スプシの予約合計人数シートにおける，ステの予約合計人数のインデックス
 const MAX_PEOPLE_NUM_INDEX = 3;
 const RESERVED_NUM_INDEX = 4;
 const LEFT_PEOPLE_NUM_INDEX = 5;

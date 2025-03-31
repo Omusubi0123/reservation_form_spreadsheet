@@ -1,16 +1,23 @@
+// スプシの該当する列名
 const MAIL_ADDRESS_COLUMN = "メールアドレス";
 const REPRESENTATIVE_NAME_COLUMN = "お名前（代表者）";
+
+// 以下は各自の環境に合わせて変更してください
+const MUSICAL_TITLE = "【公演名】";
+const EMAIL_FROM = "【担当者のメールアドレス】"
+const MUSICAL_GROUP = "【公演団体名】";
+const MUSICAL_VENUE = "【公演会場】";
+const VENUE_ACCESS = "【会場アクセス】";
 
 function sendEmailSuccess(column_data, submitted_data) { 
   // 予約に成功した場合
   // 提出されたフォームデータから確認メールを送信
   var dict = merge_list_to_dict(column_data, submitted_data);
 
-  var subject = 'UTESS Drama Section Spring Production 2024 "Into The Woods" ご予約確定のお知らせ';
+  var subject = `${MUSICAL_TITLE} ご予約残席不足のお知らせ`;
   
   var email = dict[MAIL_ADDRESS_COLUMN];
-  // var from = "essdrama24producer@gmail.com"
-  var from = "izawa-yoshihiro146@g.ecc.u-tokyo.ac.jp"
+  var from = EMAIL_FROM
   var body = header_body_success(dict);
   body += form_data_to_body(dict, true);
   body += play_description();
@@ -25,9 +32,9 @@ function sendEmailCapacityOver(column_data, submitted_data) {
   // 提出されたフォームデータから確認メールを送信
   var dict = merge_list_to_dict(column_data, submitted_data);
 
-  var subject = 'UTESS Drama Section Spring Production 2024 "Into The Woods" ご予約残席不足のお知らせ';
+  var subject = `${MUSICAL_TITLE} ご予約残席不足のお知らせ`;
   var email = dict[MAIL_ADDRESS_COLUMN];
-  var from = "essdrama24producer@gmail.com"
+  var from = EMAIL_FROM
   var body = header_body_failure(dict);
   body += form_data_to_body(dict, false);
   body += footer_body();
@@ -71,24 +78,24 @@ function form_data_to_body(dict, result) {
 
 function header_body_success(dict) {
   var body = `<p>${dict[REPRESENTATIVE_NAME_COLUMN]} 様<br><br>`;
-  body += "この度は東京大学ESSドラマセクションSpring Production2024 “Into the Woods”へのご予約誠にありがとうございます。<br><br>";
+  body += `この度は ${MUSICAL_TITLE} へのご予約誠にありがとうございます。<br><br>`;
   body += "お申し込みが完了しました。<br>";
   body += "以下にご予約の詳細を記載いたしますので、ご確認の上、ご来場賜りますようお願い申し上げます。<br>";
-  body += "（キャンセル・変更の際は、essdrama24producer@gmail.com までご連絡ください。）<br><br></p>";
+  body += `（キャンセル・変更の際は、${EMAIL_FROM} までご連絡ください。）<br><br></p>`;
   return body;
 }
 
 function header_body_failure(dict) {
   var body = `<p>${dict[REPRESENTATIVE_NAME_COLUMN]} 様<br><br>`;
-  body += "この度は東京大学ESSドラマセクションSpring Production2024 “Into the Woods”へのご予約誠にありがとうございます。<br><br>";
+  body += `この度は ${MUSICAL_TITLE} へのご予約誠にありがとうございます。<br><br>`;
   body += "大変申し訳ありませんが、ご予約いただいた人数が公演の残りの席数を超えてしまいましたので、ご予約を受け付けることができませんでした。<br>まだ空席のある公演もございますので、もしご都合がよろしければそちらでの観劇をご検討ください。<br>";
   body += "お手数おかけして申し訳ありませんが、どうぞよろしくお願いいたします。<br></p>";
   return body;
 }
 
 function play_description() {
-  var body = "<p>【劇場アクセス】<br>東京大学駒場キャンパス内 駒場小空間（多目的ホール）<br>";
-  body += "京王井の頭線駒場東大前駅東口より徒歩10分<br>";
+  var body = `<p>【劇場アクセス】<br>${MUSICAL_VENUE}<br>`;
+  body += `${VENUE_ACCESS}<br>`;
   body += "※駐車場などはございませんので、公共交通機関をご利用ください。<br><br>";
   body += "■ 本公演は入場無料・カンパ制となっております。受付開始・開場は開演の30分前です。日程・開演時刻等ご確認のうえ、会場へお越しください。<br>";
   body += "■ 開演5分前を過ぎるとお席をご用意できないことがございます。お早めにご来場ください。<br>";
@@ -99,8 +106,8 @@ function play_description() {
 
 function footer_body() {
   var body = "<p>*************************************************<br>";
-  body += "東京大学 ESS drama section<br>";
-  body += "Email: essdrama24producer@gmail.com<br>"
+  body += `${MUSICAL_GROUP}<br>`;
+  body += `Email: ${EMAIL_FROM}<br>`;
   body += "*************************************************</p>";
   return body;
 }
