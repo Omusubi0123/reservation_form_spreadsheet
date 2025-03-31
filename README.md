@@ -28,8 +28,10 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - 同行者名2
         - 同行者名3
         - 同行者名4
-    ![1セクション](./material/form1.png)
-    ![2セクション](./material/form2.png)
+    <p align="center">
+        <img src="material/form1.png" alt="1セクション" width="50%">
+        <img src="material/form2.png" alt="2セクション" width="50%">
+    </p>
 
 2. Googleスプレッドシートを作成
     - 1で作成したGoogleフォームの回答が記録されるGoogleスプレッドシートを作成します．
@@ -54,9 +56,11 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - 同時に，この残席数の情報を基に，フォームの予約日時のプルダウンの説明文・選択肢が更新されます．
         - 残席数が`15%`未満の場合，その公演の予約状況が`〇`から`▲(残席わずか)`に変更され，残席数が表示される
         - 残席数が`0`になると，`▲`から`×(満席)`に変更され，その公園の選択肢がフォームから削除される
-    ![予約状況シート](./material/spreadsheet1.png)
-    ![1ステシート](./material/spreadsheet2.png)
-    ![予約合計人数シート](./material/spreadsheet3.png)
+    <p align="center">
+        <img src="material/spreadsheet1.png" alt="予約状況シート" width="50%">
+        <img src="material/spreadsheet2.png" alt="1ステシート" width="50%">
+        <img src="material/spreadsheet3.png" alt="予約合計人数シート" width="50%">
+    </p>
 
 3. Google Apps Script（GAS）を作成
     - 2で作成したGoogleスプレッドシートに紐付けるGoogle Apps Scriptを作成します．
@@ -66,5 +70,7 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - よって，`src/`の全ファイルの内容を`main.gs`にまとめても構いません．
         - `form_submitted.js`がメインの処理を行うファイルです．
     - 各ファイルの内容は以下です．
-    ![GAS](./material/gas1.png)
-    ![trigger](./material/gas2.png)
+    <p align="center">
+        <img src="material/gas1.png" alt="GAS" width="50%">
+        <img src="material/gas2.png" alt="trigger" width="50%">
+    </p>
