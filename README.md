@@ -1,11 +1,11 @@
-# 観劇予約フォームシステム（with Google FOrm, Google Spreadsheet, GAS）
+# 観劇予約フォームシステム  （with Google Form, Google Spreadsheet, GAS）
 
 GoogleフォームとGoogleスプレッドシートを使った観劇予約フォームシステムです．
 
 ## 作成手順
-※プログラムはフォーム項目の順番，スプシのシート名に依存しているため，同一の順番で作成してください．変更したい場合はプログラムの修正が必要です🙇‍♂️
+※プログラムはフォーム項目の順番，スプシのシート名に依存しているため，同一の順番で作成してください．  変更したい場合はプログラムの修正が必要です🙇‍♂️
 1. Googleフォームを作成
-    - [このフォーム](https://docs.google.com/forms/d/e/1FAIpQLScPAlKBT6gZzwkpSjzE9CfoxorkBzL9Xeh1m7tN74fxBZMZzw/viewform, "Googleフォーム")を参考に，Googleフォームを作成します．
+    - [このフォーム](https://docs.google.com/forms/d/e/1FAIpQLScPAlKBT6gZzwkpSjzE9CfoxorkBzL9Xeh1m7tN74fxBZMZzw/viewform)を参考に，Googleフォームを作成します．
     - フォーム項目のタイトルは↑のフォームと同一にしていただくと，プログラムの修正が不要です．
     - 1セクション
         - メールアドレス
@@ -22,7 +22,7 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - 予約人数
             - ラジオボタン，この人数-1個の項目を2セクションに配置
     - 2セクション
-        - 同行者名入力（Ð砕氷者を除く）
+        - 同行者名入力（代表者を除く）
         - 同行者名1
         - 同行者名2
         - 同行者名3
@@ -60,4 +60,3 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - よって，`src/`の全ファイルの内容を`main.gs`にまとめても構いません．
         - `form_submitted.js`がメインの処理を行うファイルです．
     - 各ファイルの内容は以下です．
-    
