@@ -57,9 +57,9 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - 残席数が`15%`未満の場合，その公演の予約状況が`〇`から`▲(残席わずか)`に変更され，残席数が表示される
         - 残席数が`0`になると，`▲`から`×(満席)`に変更され，その公園の選択肢がフォームから削除される
     <p align="center">
-        <img src="material/spreadsheet1.png" alt="予約状況シート" width="50%">
-        <img src="material/spreadsheet2.png" alt="1ステシート" width="50%">
-        <img src="material/spreadsheet3.png" alt="予約合計人数シート" width="50%">
+        <img src="material/spreadsheet1.png" alt="予約状況シート" width="80%">
+        <img src="material/spreadsheet2.png" alt="1ステシート" width="80%">
+        <img src="material/spreadsheet3.png" alt="予約合計人数シート" width="80%">
     </p>
 
 3. Google Apps Script（GAS）を作成
@@ -71,6 +71,6 @@ GoogleフォームとGoogleスプレッドシートを使った観劇予約フ�
         - `form_submitted.js`がメインの処理を行うファイルです．
     - 各ファイルの内容は以下です．
     <p align="center">
-        <img src="material/gas1.png" alt="GAS" width="50%">
-        <img src="material/gas2.png" alt="trigger" width="50%">
+        <img src="material/gas1.png" alt="GAS", width="80%">
+        <img src="material/gas2.png" alt="trigger", width="80%">
     </p>
